@@ -146,7 +146,7 @@ if test "$PACKAGE_NAME" = "MPICH" ; then
 	MPICH_MPIF77_LIBS="-lpthread -lrt" && echo "MPICH_MPIF77_LIBS=$MPICH_MPIF77_LIBS"
 	MPICH_MPIFORT_LIBS="-lpthread -lrt" && echo "MPICH_MPIFORT_LIBS=$MPICH_MPIFORT_LIBS"
 
-	MPICHLIB_CPPFLAGS="-I/bgsys/drivers/ppcfloor/spi/include/kernel/cnk -I/bgsys/drivers/ppcfloor"
+	MPICHLIB_CPPFLAGS="-I/soft/libraries/unsupported/V1R2M4-sys/spi/include/kernel/cnk -I/soft/libraries/unsupported/V1R2M4-sys"
 
 	if test "$CONFIG_FLAVOR" = "optimized" ; then
 		MPICHLIB_CFLAGS="$OPT_CFLAGS -Wno-ignored-qualifiers -Wall -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I$configdir/src/mpid/ch4/netmod/ofi/libfabric/prov/bgq/include -I$srcdir/src/mpid/ch4/netmod/ofi/libfabric/prov/bgq/include"
